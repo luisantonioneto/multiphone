@@ -8,9 +8,65 @@
 </ion-header>
 
 <ion-content>
-  <h3>Cadastro de Empresas</h3>
+  <ion-list>
+      <ion-item>
+        <ion-label floating>Razão Social</ion-label>
+        <ion-input type="text" value="{{empresa.razaoSocial}}"></ion-input>
+      </ion-item>
 
-  <p>
-    Teste
-  </p>
+      <ion-item>
+        <ion-label floating>Nome Fantasia</ion-label>
+        <ion-input type="text" value="{{empresa.nomeFantasia}}"></ion-input>
+      </ion-item>
+   
+      <ion-item>
+        <ion-label floating>CNPJ</ion-label>
+        <ion-input type="text" value="{{empresa.cnpj}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Telefone Comercial</ion-label>
+        <ion-input type="text" value="{{empresa.telefoneComercial}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Telefone Celular</ion-label>
+        <ion-input type="text" value="{{empresa.telefoneCelular}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>E-mail</ion-label>
+        <ion-input type="text" value="{{empresa.email}}"></ion-input>
+      </ion-item>                 
+
+      <ion-item>
+        <ion-label floating>Percentual</ion-label>
+        <ion-input type="text" value="{{empresa.percentual}}"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cliente</ion-label>
+        <ion-checkbox checked="{{empresa.cliente}}"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Forncedor</ion-label>
+        <ion-checkbox checked="{{empresa.fornecedor}}"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Ativo</ion-label>
+        <ion-checkbox checked="{{empresa.ativo}}"></ion-checkbox>
+      </ion-item>      
+
+      <ion-item>
+        <ion-label floating>Observação</ion-label>
+        <ion-input type="text" value="{{empresa.observacao}}"></ion-input>
+      </ion-item>
+
+      <p>
+      <button ion-button sucondary>
+        Salvar
+      </button>      
+    </ion-list>
 </ion-content>

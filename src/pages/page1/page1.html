@@ -3,12 +3,7 @@
     <button ion-button menuToggle left>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Empresas</ion-title>
-    <ion-buttons end right>
-      <button ion-button (click)="abrirCadastroEmpresa()">
-          <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons>    
+    <ion-title>Página Inicial</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -19,9 +14,9 @@
     If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
   </p>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <button ion-button secondary menuToggle>Menu</button>
 
-  <button ion-button sucondary (click)="abrirCadastroEmpresa()">
+  <button ion-button secondary (click)="abrirCadastroEmpresa($event, null)">
     Abrir Cadastro
-  </button>  
+  </button>
 </ion-content>

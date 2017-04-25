@@ -1,16 +1,32 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
+import { HomePage } from '../pages/page1/page1';
 import { CadastroEmpresa } from '../pages/cadastroEmpresa/cadastroEmpresa';
+import { ListaEmpresa } from '../pages/listaEmpresa/listaEmpresa';
+import { ConsultaCepPage } from '../pages/consulta-cep/consulta-cep';
+import { LocalidadesPage } from '../pages/localidades/localidades';
+import { ListaEstadoPage } from '../pages/lista-estado/lista-estado';
+import { ListaCidadePage } from '../pages/lista-cidade/lista-cidade';
+import { ListaPedidoPage } from '../pages/lista-pedido/lista-pedido';
+import { CadastroPedidoPage } from '../pages/cadastro-pedido/cadastro-pedido';
+import { CadastroEstadoPage } from '../pages/cadastro-estado/cadastro-estado';
+import { CadastroCidadePage } from '../pages/cadastro-cidade/cadastro-cidade';
 
 @NgModule({
   declarations: [
     MyApp,
-    Page1,
-    Page2,
-    CadastroEmpresa
+    HomePage,
+    CadastroEmpresa,
+    ListaEmpresa,
+    ConsultaCepPage,
+    LocalidadesPage,
+    ListaEstadoPage,
+    ListaCidadePage,
+    ListaPedidoPage,
+    CadastroPedidoPage,
+    CadastroEstadoPage,
+    CadastroCidadePage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -18,9 +34,17 @@ import { CadastroEmpresa } from '../pages/cadastroEmpresa/cadastroEmpresa';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    Page1,
-    Page2, 
-    CadastroEmpresa
+    HomePage,
+    CadastroEmpresa,
+    ListaEmpresa,
+    ConsultaCepPage,
+    LocalidadesPage,
+    ListaEstadoPage,
+    ListaCidadePage,
+    ListaPedidoPage,
+    CadastroPedidoPage,
+    CadastroEstadoPage,
+    CadastroCidadePage
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

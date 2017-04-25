@@ -1,0 +1,38 @@
+<!--
+  Generated template for the CadastroCidade page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cadastro Cidade</ion-title>
+    <ion-buttons end right>
+      <button ion-button (click)="salvarEVoltar(cidade)">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label floating>Código</ion-label>
+    <ion-input type="text" value="{{cidade.codCidade}}" [readonly]="isReadonly"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Nome</ion-label>
+    <ion-input type="text" value="{{cidade.nome}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>UF</ion-label>
+    <ion-select [(ngModel)]="cidade.estado">
+      <ion-option *ngFor="let estado of estados" [selected]="selected">
+        {{estado.nome}}
+      </ion-option>
+    </ion-select>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Empresas</ion-title>
+    <ion-buttons end right>
+      <button ion-button (click)="abrirCadastroEmpresa($event, null)">
+          <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>       
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar (ionInput)="getEmpresas($event)"></ion-searchbar>
+  <ion-list>
+    <button ion-item *ngFor="let empresa of empresas" (click)="abrirCadastroEmpresa($event, empresa)">
+      <ion-icon [name]="empresa.icon" item-left></ion-icon>
+        {{empresa.razaoSocial}}
+      <div class="item-note" item-right>
+        {{empresa.nomeFantasia}}
+      </div>
+    </button>
+  </ion-list>
+  <div *ngIf="empresaSelecionada" padding>
+    You navigated here from <b>{{empresaSelecionada.title}}</b>
+  </div>
+</ion-content>

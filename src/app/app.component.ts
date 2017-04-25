@@ -2,9 +2,11 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
-import { CadastroEmpresa } from '../pages/cadastroEmpresa/cadastroEmpresa';
+import { HomePage } from '../pages/page1/page1';
+import { ListaEmpresa } from '../pages/listaEmpresa/listaEmpresa';
+import { ConsultaCepPage } from '../pages/consulta-cep/consulta-cep';
+import { LocalidadesPage } from '../pages/localidades/localidades';
+import { ListaPedidoPage } from '../pages/lista-pedido/lista-pedido';
 
 
 @Component({
@@ -13,20 +15,22 @@ import { CadastroEmpresa } from '../pages/cadastroEmpresa/cadastroEmpresa';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+  rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
+
+  icon: string;
 
   constructor(public platform: Platform) {
     this.initializeApp();
-
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Page One', component: Page1 },
-      { title: 'Page Two', component: Page2 },
-      { title: 'Cadastro Empresa', component: CadastroEmpresa}
+      { title: 'Início', component: HomePage, icon: 'home' },
+      { title: 'Consulta Cep', component: ConsultaCepPage, icon: 'search'},
+      { title: 'Empresas', component: ListaEmpresa, icon: 'paper'},
+      { title: 'Localidades', component: LocalidadesPage, icon: 'pin'},
+      { title: 'Pedidos', component: ListaPedidoPage, icon: 'list-box'}
     ];
-
   }
 
   initializeApp() {
